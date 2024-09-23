@@ -1,5 +1,5 @@
 #cd to directory with data
-cd /projects/mjolnir1/people/crq857/Chapter2/03_GeneflowAnalyses/FEEMS/finaldataset/res.eurasia_samples_Sept11.pdf
+cd /projects/mjolnir1/people/crq857/Chapter2/03_GeneflowAnalyses/FEEMS/finaldataset
 
 #create a screen session
 screen
