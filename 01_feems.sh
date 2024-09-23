@@ -6,6 +6,8 @@ screen
 srun -N 1 -c 1 --mem-per-cpu=64g -t 1-0:0:0 --pty bash -i
 
 # I installed feems following the instructions on the github page
+conda install -c bioconda feems -c conda-forge #my feems is located here: /home/crq857/mambaforge/envs/feems_e
+
 conda create -n=feems_e python=3.8.3 
 conda activate feems_e
 
@@ -23,11 +25,6 @@ conda install openpyxl==3.0.7
 conda install suitesparse=5.7.2
 conda install scikit-sparse=0.4.4 
 conda install cartopy=0.18.0
-
-#then clone the directory
-git clone https://github.com/NovembreLab/feems
-cd feems/
-pip install .
 
 #conda create -n=feems_e python=3.8.3 
 conda activate feems_e
