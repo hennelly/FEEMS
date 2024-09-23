@@ -24,6 +24,10 @@ conda install suitesparse=5.7.2
 conda install scikit-sparse=0.4.4 
 conda install cartopy=0.18.0
 
+#then clone the directory
+git clone https://github.com/NovembreLab/feems
+cd feems/
+pip install .
 
 #conda create -n=feems_e python=3.8.3 
 conda activate feems_e
