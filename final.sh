@@ -1,3 +1,8 @@
+sftp LwKsBCw7QM@io.erda.dk
+
+Password: LwKsBCw7QM
+
+
 Extract command lines
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 cd /scratch/genomics/hennellyl/feems 
@@ -27,17 +32,17 @@ from feems.utils import prepare_graph_inputs #ModuleNotFoundError: No module nam
 
 from feems import SpatialGraph, Viz #ImportError: cannot import name 'SpatialGraph' from 'feems' (unknown location)
 from feems.cross_validation import run_cv #ModuleNotFoundError: No module named 'feems.cross_validation'
-
+Autosomes_onlyEurasianwolves_filtered_noindels_noastrick_diploid_minQ30_biallelic_maxmiss1_LDprune.bed
 
 %%time
 # load data
-(bim, fam, G) = read_plink("/scratch/genomics/hennellyl/feems/Autosomes_onlyEurasianwolves_filtered_noindels_noastrick_diploid_minQ30_biallelic_maxmiss0.9_LDprune".format("./"))
+(bim, fam, G) = read_plink("/scratch/genomics/hennellyl/feems/Autosomes_onlyEurasianwolves_filtered_noindels_noastrick_diploid_minQ30_biallelic_maxmiss1_LDprune".format("./"))
 genotypes = (np.array(G)).T #MemoryError: Unable to allocate 3.12 GiB for an array with shape (8822373, 95) and data type float32
 
 # setup graph
 coord = np.loadtxt("/scratch/genomics/hennellyl/feems/Autosomes_onlyEurasianwolves_filtered_noindels_noastrick_diploid_minQ30_biallelic_maxmiss0.9_LDprune.coord".format("./"))  # sample coordinates
 outer = np.loadtxt("/scratch/genomics/hennellyl/feems/Autosomes_onlyEurasianwolves_filtered_noindels_noastrick_diploid_minQ30_biallelic_maxmiss0.9_LDprune.outer".format("./"))  # outer coordinates
-grid_path = "{}/grid_100.shp".format("/projects/mjolnir1/people/gnr216/a-software/feems/feems/data")  # path to discrete global grid
+grid_path = "{}/grid_100.shp".format("/scratch/genomics/hennellyl/feems")  # path to discrete global grid
 
 # graph input files
 outer, edges, grid, _ = prepare_graph_inputs(coord=coord,
